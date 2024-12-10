@@ -1,0 +1,10 @@
+grep -o -i "quijote" el_quijote.txt | wc -l 
+grep -v -i "quijote" el_quijote.txt | wc -l
+grep -r -o -i "quijote" * | wc -l
+grep -r -l -i "quijote" * | xargs -I {} grep -o -i "quijote" {} | wc -l
+sed 's/panza/barriga/g' el_quijote.txt
+sed 's/panza/barriga/Ig' el_quijote.txt
+head -c 4 el_quijote.txt
+head -c 4000 el_quijote.txt
+sed -n '14,25p' el_quijote.txt
+sort -f -r el_quijote.txt
